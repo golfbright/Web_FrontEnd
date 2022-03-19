@@ -1,0 +1,53 @@
+<div *ngIf="accept" class="col-lg-flex">
+  <nb-card-header>รายการที่อยู่</nb-card-header>
+  <nb-card>
+    <nb-card-body>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="namePlace" class="label">ชื่อสถานที่</label>
+          <input type="text" [(ngModel)]="apiData.namePlace" #namePlace="ngModel" nbInput fullWidth
+            placeholder="ชื่อสถานที่">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Gps" class="label">Gps</label>
+          <input type="text" [(ngModel)]="apiData.gps" #gpsLat="ngModel" nbInput fullWidth placeholder="จีพีเอส">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="addressNumber" class="label">เลขที่อยู่</label>
+          <input type="text" [(ngModel)]="apiData.addressNumber" #addressNumber="ngModel" nbInput fullWidth
+            placeholder="เลขที่อยู่">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="district" class="label">อำเภอ</label>
+          <input type="text" [(ngModel)]="apiData.district" #district="ngModel" nbInput fullWidth placeholder="อำเภอ">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="county" class="label">เขต/ตำบล</label>
+          <input type="text" [(ngModel)]="apiData.country" #district="ngModel" nbInput fullWidth
+            placeholder="เขต/ตำบล">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="street" class="label">ถนน</label>
+          <input type="text" [(ngModel)]="apiData.street" #street="ngModel" nbInput fullWidth placeholder="ถนน">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="zipCode" class="label">รหัสไปรษณีย์</label>
+          <input type="text" [(ngModel)]="apiData.zipCode" #district="ngModel" nbInput fullWidth
+            placeholder="รหัสไปรษณีย์">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="province" class="label">จังหวัด</label>
+          <input type="text" [(ngModel)]="apiData.province" #district="ngModel" nbInput fullWidth placeholder="จังหวัด">
+        </div>
+      </div>
+      <div style="float: left; width: 130px">
+        <button type="submit" nbButton status="danger" (click)="OnClickCancel()">Cancel</button>
+      </div>
+      <div style="float: right; ">
+        <button type="submit" nbButton status="primary" (click)="OnClickSave()">Save</button>
+      </div>
+    </nb-card-body>
+  </nb-card>
+</div>
+
+<meta *ngIf="!accept" http-equiv="refresh" content="0; url=/pages/Not-Accept" />

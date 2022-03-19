@@ -1,0 +1,115 @@
+<div *ngIf="accept" class="col-lg-flex">
+  <nb-card>
+    <nb-card-header>
+      <h6>รายละเอียดงานขนส่ง</h6>
+    </nb-card-header>
+    <nb-card-body>
+      <label for="taskStatus" class="label">สถานะงานขนส่ง</label>
+      <div class="form-row">
+        <nb-card-body>
+          <nb-select  [(ngModel)]="apiData.taskStatus" fullWidth>
+            <nb-option value="ยังไม่ได้ดำเนินการ">ยังไม่ได้รับการจอง</nb-option>
+            <nb-option value="ได้รับการจอง">ได้รับการจอง</nb-option>
+            <nb-option value="ดำเนินการอยู่">ดำเนินการอยู่</nb-option>
+            <nb-option value="ดำเนินการเสร็จสิ้น">ดำเนินการเสร็จสิ้น</nb-option>
+            <nb-option value="งานมีปัญหา">งานมีปัญหา</nb-option>
+          </nb-select>
+        </nb-card-body>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="taskStartDate" class="label">วันเวลาเริ่มงาน</label>
+          <input type="datetime-local" nbInput fullWidth [(ngModel)]="apiData.taskStartDate">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="taskFinishDate" class="label">วันเวลาจบงาน</label>
+          <input type="datetime-local" nbInput fullWidth [(ngModel)]="apiData.taskFinishDate">
+        </div>
+      </div>
+      <div class="form-row">
+        <textarea type="text" rows="5" nbInput fullWidth shape="round" placeholder="รายละเอียดงานขนส่ง" [(ngModel)]="apiData.taskDetail"></textarea>
+      </div>
+
+
+      <div class="col-lg-flex">
+        <nb-card-header>
+          <h6>สถานที่จัดส่ง</h6>
+        </nb-card-header>
+        <div class="form-group col-md-5">
+          <p-dropdown placeholder="Select" [showClear]="true" [filter]="true" filterBy="namePlace"
+            [options]="addressData" [(ngModel)]="keepaddressData" optionLabel="namePlace"
+            (ngModelChange)="changeCheck()"></p-dropdown>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="namePlace" class="label">ชื่อสถานที่จัดส่ง</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.namePlace">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="addressNumber" class="label">หมายเลขที่อยู่</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.addressNumber">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="district" class="label">อำเภอ/เขต</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.district">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="country" class="label">ตำบล/แขวง</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.country">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="street" class="label">ถนน</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.street">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="zipCode" class="label">รหัสไปรษณีย์</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.zipCode">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="province" class="label">จังหวัด</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.province">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-flex">
+        <nb-card-header>
+          <h6>เลือกรถที่จะขนส่ง</h6>
+        </nb-card-header>
+        <div class="form-group col-md-5">
+          <p-dropdown placeholder="Select" [showClear]="true" [filter]="true" filterBy="vehiclePlate"
+            [options]="carData" [(ngModel)]="keepCarData" optionLabel="vehiclePlate"
+            (ngModelChange)="changeCar()"></p-dropdown>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="vehiclePlate" class="label">ป้านทะเบียน</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.vehiclePlate">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="vehicleBrand" class="label">ยี่ห้อ</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.vehicleBrand">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="vehicleType" class="label">ขนาดรถ</label>
+            <input type="text" nbInput fullWidth [(ngModel)]="apiData.vehicleType">
+          </div>
+        </div>
+      </div>
+
+
+
+      <div style="float: left; width: 130px">
+        <button type="submit" nbButton status="danger" (click)="OnClickCancel()">Cancel</button>
+      </div>
+      <div style="float: right; ">
+        <button type="submit" nbButton status="primary" (click)="OnClickSave()">Save</button>
+      </div>
+    </nb-card-body>
+  </nb-card>
+</div>
+
+<meta *ngIf="!accept" http-equiv="refresh" content="0; url=/pages/Not-Accept" />
