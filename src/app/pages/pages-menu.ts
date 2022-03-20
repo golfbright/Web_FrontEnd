@@ -8,29 +8,30 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
   {
     title: 'บัญชีผู้ใช้',
-    icon: 'shopping-cart-outline',
+    icon: 'people-outline',
     link: '/pages/account',
   },
   {
     title: 'บทบาท',
-    icon: 'shopping-cart-outline',
+    icon: 'sbriefcase-outline',
     link: '/pages/role',
     
   },
   {
     title: 'ที่อยู่',
-    icon: 'shopping-cart-outline',
+    icon: 'map-outline',
     link: '/pages/address',
     
   },
   {
     title: 'ยานพาหนะ',
-    icon: 'shopping-cart-outline',
+    icon: 'car-outline',
     link: '/pages/vehicle',
     
   },
   {
     title: 'จัดการงานขนส่ง',
+    icon: 'globe-2-outline',
     link: '/pages/task-transport',
   },
   

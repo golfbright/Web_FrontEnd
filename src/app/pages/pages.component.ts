@@ -34,36 +34,37 @@ export class PagesComponent {
       },
       {
         title: 'บัญชีผู้ใช้',
-        icon: 'shopping-cart-outline',
+        icon: 'people-outline',
         link: '/pages/account',
       },
       {
         title: 'บทบาท',
-        icon: 'shopping-cart-outline',
+        icon: 'sbriefcase-outline',
         link: '/pages/role',
 
       },
       {
         title: 'ที่อยู่',
-        icon: 'shopping-cart-outline',
+        icon: 'map-outline',
         link: '/pages/address',
 
       },
       {
         title: 'ยานพาหนะ',
-        icon: 'shopping-cart-outline',
+        icon: 'car-outline',
         link: '/pages/vehicle',
 
       },
       {
         title: 'จัดการงานขนส่ง',
+        icon: 'globe-2-outline',
         link: '/pages/task-transport',
       }];
 
       localStorage.setItem('accountFormPage', "true");
       localStorage.setItem('accountPage', "true");
       localStorage.setItem('rolePage', "true");
-      localStorage.setItem('roleFormPage',"true");
+      localStorage.setItem('roleFormPage', "true");
       localStorage.setItem('addressPage', "true");
       localStorage.setItem('addressFormPage', "true");
       localStorage.setItem('vehiclePage', "true");
@@ -80,23 +81,24 @@ export class PagesComponent {
         },
         {
           title: 'บัญชีผู้ใช้',
-          icon: 'shopping-cart-outline',
+          icon: 'people-outline',
           link: '/pages/account',
         },
         {
           title: 'ที่อยู่',
-          icon: 'shopping-cart-outline',
+          icon: 'map-outline',
           link: '/pages/address',
-
+  
         },
         {
           title: 'ยานพาหนะ',
-          icon: 'shopping-cart-outline',
+          icon: 'car-outline',
           link: '/pages/vehicle',
-
+  
         },
         {
           title: 'จัดการงานขนส่ง',
+          icon: 'globe-2-outline',
           link: '/pages/task-transport',
         }];
         localStorage.setItem('accountFormPage', "true");
