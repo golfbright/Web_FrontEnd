@@ -66,7 +66,7 @@ export class PagesComponent {
       localStorage.setItem('roleFormPage',"true");
       localStorage.setItem('addressPage', "true");
       localStorage.setItem('addressFormPage', "true");
-      localStorage.setItem('vahiclePage', "true");
+      localStorage.setItem('vehiclePage', "true");
       localStorage.setItem('vahicleFormPage', "true");
       localStorage.setItem('taskTransportPage', "true");
       localStorage.setItem('taskTransportFormPage', "true");
@@ -103,7 +103,7 @@ export class PagesComponent {
         localStorage.setItem('accountPage', "true");
         localStorage.setItem('addressPage', "true");
         localStorage.setItem('addressFormPage', "true");
-        localStorage.setItem('vahiclePage', "true");
+        localStorage.setItem('vehiclePage', "true");
         localStorage.setItem('vahicleFormPage', "true");
         localStorage.setItem('taskTransportPage', "true");
         localStorage.setItem('taskTransportFormPage', "true");
