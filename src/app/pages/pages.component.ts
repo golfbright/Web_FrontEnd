@@ -67,7 +67,7 @@ export class PagesComponent {
       localStorage.setItem('addressPage', "true");
       localStorage.setItem('addressFormPage', "true");
       localStorage.setItem('vehiclePage', "true");
-      localStorage.setItem('vahicleFormPage', "true");
+      localStorage.setItem('vehicleFormPage', "true");
       localStorage.setItem('taskTransportPage', "true");
       localStorage.setItem('taskTransportFormPage', "true");
 
@@ -104,7 +104,7 @@ export class PagesComponent {
         localStorage.setItem('addressPage', "true");
         localStorage.setItem('addressFormPage', "true");
         localStorage.setItem('vehiclePage', "true");
-        localStorage.setItem('vahicleFormPage', "true");
+        localStorage.setItem('vehicleFormPage', "true");
         localStorage.setItem('taskTransportPage', "true");
         localStorage.setItem('taskTransportFormPage', "true");
       }
