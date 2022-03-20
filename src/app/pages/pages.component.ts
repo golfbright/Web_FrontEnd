@@ -39,7 +39,7 @@ export class PagesComponent {
       },
       {
         title: 'บทบาท',
-        icon: 'sbriefcase-outline',
+        icon: 'award-outline',
         link: '/pages/role',
 
       },
