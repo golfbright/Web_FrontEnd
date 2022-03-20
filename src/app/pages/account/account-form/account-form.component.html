@@ -44,8 +44,8 @@
           </nb-select>
         </nb-card-body>
       </nb-card-header>
-
-      <label for="firstN" class="label">ชื่อจริง-นามสกุล</label>
+<div><label for="firstN" class="label">ชื่อจริง-นามสกุล</label></div>
+      
       <div class="full-name-inputs">
         <input type="text" id="firstN" maxlength="16" [(ngModel)]="apiData.firstName" nbInput fullWidth placeholder="ชื่อจริง">
         <input type="text" id="lastN" [(ngModel)]="apiData.lastName" nbInput fullWidth placeholder="นามสกุล">
@@ -82,7 +82,6 @@
         fullWidth placeholder="เลขที่ใบขับขี" #driverLicense="ngModel">
 
       <h6>Set Roles</h6>
-      {{ apiData.roleIds | json}}
       <nb-card-header *ngFor="let role of allRole" class="row">
         <p-checkbox [label]="role.roleName" [value]="role.id" [(ngModel)]="apiData.roleIds"></p-checkbox>
       </nb-card-header>
@@ -92,7 +91,7 @@
           <td><img [src]="showImgPath()" alt="profile picture" style="width:60px; height:60px;"></td>
         </nb-card-body>
     </div>
-    
+    <label for="namePlace" class="label" style="color:red">* (ขนาดของรูปภาพไม่เกิน 2 MB) </label>
       <label for="img">ภาพถ่ายบุคคล :</label>
       <input type="file" #file id="img" accept="image/*" nbInput fullWidth placeholder="Image Profile">
 
